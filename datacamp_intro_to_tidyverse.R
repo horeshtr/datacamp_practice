@@ -44,4 +44,14 @@ gapminder %>%
 
 ### Visualizing data using ggplot2
 
-# 
+# load the ggplot2 package if needed
+if(!require(ggplot2)) install.packages("ggplot2")
+library(ggplot2)
+
+# create a subset of only 2007 data
+gapminder_2007 <- gapminder %>%
+  filter(year == 2007)
+
+# visualize life expectancy by GDP per capita with ggplot2
+ggplot(gapminder_2007, aes(x = gdpPercap, y = lifeExp)) + 
+  geom_point()
