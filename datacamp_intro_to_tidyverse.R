@@ -55,3 +55,16 @@ gapminder_2007 <- gapminder %>%
 # visualize life expectancy by GDP per capita with ggplot2
 ggplot(gapminder_2007, aes(x = gdpPercap, y = lifeExp)) + 
   geom_point()
+
+# log scales
+ggplot(gapminder_2007, aes(x = gdpPercap, y = lifeExp)) + 
+  geom_point() + 
+  scale_x_log10()
+
+# additional aesthetics
+ggplot(gapminder_2007, 
+       aes(x = gdpPercap, y = lifeExp, color = continent, size = pop)) + 
+  geom_point() + 
+  scale_x_log10()
+
+
