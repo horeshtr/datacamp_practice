@@ -7,6 +7,8 @@ library(gapminder)
 library(dplyr)
 
 
+#### Wrangling data using dplyr
+
 # filter
 
 # filtering for one year
@@ -32,3 +34,14 @@ gapminder %>%
 gapminder %>%
   arrange(desc(gdpPercap))
 
+
+# mutate
+
+# create a column for total GDP
+gapminder %>%
+  mutate(gdp = pop * gdpPercap)
+
+
+### Visualizing data using ggplot2
+
+# 
