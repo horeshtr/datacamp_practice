@@ -67,4 +67,16 @@ ggplot(gapminder_2007,
   geom_point() + 
   scale_x_log10()
 
+# faceting
+ggplot(gapminder_2007, aes(x = gdpPercap, y = lifeExp)) + 
+  geom_point() + 
+  scale_x_log10() +
+  facet_wrap(~ continent)
+
+
+### Summarizing data with summarize()
+
+# 
+
+
 
